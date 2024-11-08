@@ -23,7 +23,7 @@ const Sidebar = ({ closeSidebar, sidebarOpen }) => {
       <div className="sidebarMain px-5 d-flex justify-content-start col-12">
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <Link to="/" className="sidebarLink">
+            <Link to="/Portfolio.AqibAli/" className="sidebarLink">
               Home
             </Link>
           </li>

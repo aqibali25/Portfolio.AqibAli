@@ -20,7 +20,7 @@ const Profile = ({ isLogo = false }) => {
         <img src={ProfileImage} alt="Profile" className="rounded-circle" />
       </Link>
       {isLogo && screenWidth > 400 && (
-        <Link to={"/"} className="logoImage">
+        <Link to={"/Portfolio.AqibAli/"} className="logoImage">
           <img
             src={LogoImage}
             alt="Logo"
