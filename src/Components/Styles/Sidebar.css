@@ -1,0 +1,148 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a9;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.sidebar {
+  background-color: #191b1e;
+  width: 0;
+  overflow: hidden;
+  height: 100vh;
+  transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.sidebar-open {
+  width: 300px !important;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #191b1e;
+  width: 0;
+  overflow: hidden;
+  height: 100vh;
+  transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* Existing styles... */
+.profileImage img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #333333;
+}
+
+.closeButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #212428;
+  border: none;
+  position: relative;
+}
+
+.closeButton .lineX {
+  width: 15px;
+  height: 2px;
+  background-color: #f5024d;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.closeButton::after {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #f5024d;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.seprationLine {
+  width: 90%;
+  height: 1px;
+  background-color: #4d4d4e;
+  margin: 20px 0;
+}
+
+/* Sidebar Links */
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarListItem {
+  margin: 15px 0;
+}
+
+.sidebarLink {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #a7c1d2;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+
+.sidebarLink:hover {
+  color: #f5024d;
+}
+
+/* Sidebar Footer */
+.findWithMeText {
+  color: #a7c1d2;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #212428;
+  border-radius: 8px;
+  border: 2px solid #333333;
+  transition: all 0.5s ease;
+}
+
+.iconWrapper svg > path {
+  color: #dadada;
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+
+.iconWrapper svg {
+  font-size: 25px;
+}
+
+.iconWrapper:hover {
+  box-shadow: inset 6px 6px 10px -6px #000000f1;
+}
+
+.iconWrapper:hover svg > path {
+  color: #f5024d;
+}
+@media (max-width: 550px) {
+  .sidebar-open {
+    width: 100% !important;
+  }
+}
