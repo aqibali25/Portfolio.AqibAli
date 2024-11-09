@@ -9,7 +9,7 @@ body.dark {
 /* Light mode styles */
 body.light {
   --navbar-bg: #ffffff;
-  --navbar-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --navbar-box-shadow: 0 4px 10px #0000001a;
   --icon-bg: #f0f0f0;
   --icon-hover-bg: #dcdcdc;
 }
@@ -32,13 +32,10 @@ body.light {
   padding: 13px;
   border-radius: 40%;
   cursor: pointer;
-  transition: all 0.5s ease;
-  background-color: var(--icon-bg); /* Use variable for background */
+  background-color: var(--icon-bg);
 }
 
 .darkModeIcon img:hover {
-  background-color: var(
-    --icon-hover-bg
-  ); /* Use variable for hover background */
+  background-color: var(--icon-hover-bg);
   border-radius: 50%;
 }

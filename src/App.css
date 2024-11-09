@@ -15,7 +15,6 @@
 #root {
   width: 100%;
   min-height: 100vh;
-  transition: all 0.5s ease;
 }
 
 /* Light Mode Colors */
@@ -50,43 +49,6 @@ body.dark {
 #root {
   background-color: var(--bg-color);
   color: var(--text-color);
-}
-
-/* Navbar */
-.navbar {
-  background-color: var(--navbar-bg);
-  color: var(--text-color);
-  box-shadow: 0 4px 10px var(--box-shadow-color);
-  transition: all 0.5s ease;
-}
-
-/* Dark Mode Icon */
-.darkModeIcon img {
-  background-color: var(--icon-bg);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-/* Sidebar */
-.sidebar {
-  background-color: var(--sidebar-bg);
-  transition: all 0.4s ease;
-}
-
-/* Sidebar Link */
-.sidebarLink {
-  color: var(--link-color);
-  transition: all 0.3s ease;
-}
-
-.sidebarLink:hover {
-  color: var(--link-hover-color);
-}
-
-/* Sidebar Icon */
-.iconWrapper svg > path {
-  color: var(--text-color);
-  transition: all 0.3s ease;
 }
 
 /* Button Styles */

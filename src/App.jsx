@@ -3,6 +3,8 @@ import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,7 +20,11 @@ const App = () => {
   };
 
   useEffect(() => {
-    document.body.className = theme; // Apply theme to body
+    document.body.className = theme;
+    AOS.init({
+      duration: 1000, // Duration of animation
+      once: true, // Animation triggers only once
+    });
   }, [theme]);
 
   return (

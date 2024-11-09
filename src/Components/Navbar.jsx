@@ -6,8 +6,12 @@ import LightModeIcon from "../assets/light-mode.png";
 
 const Navbar = ({ openSidebar, toggleTheme, theme }) => {
   return (
-    <div className="navbar d-flex justify-content-between align-items-center px-sm-5 p-3 py-sm-3">
+    <div
+      className="navbar d-flex justify-content-between align-items-center px-sm-5 p-3 py-sm-3"
+      data-aos="fade-down"
+    >
       <ProfileCircle isLogo={true} theme={theme} />
+
       <div className="navIcons d-flex justify-content-between align-items-center">
         <div className="darkModeIcon" onClick={toggleTheme}>
           <img
