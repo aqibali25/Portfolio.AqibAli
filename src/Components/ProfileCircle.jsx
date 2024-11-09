@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProfileImage from "../assets/ProfileImage1.jpg";
-import LogoImage from "../assets/logo-white.png";
+import DarkModeLogoImage from "../assets/logo-white.png";
+import LightModeLogoImage from "../assets/logo-black.png";
 
-const Profile = ({ isLogo = false }) => {
+const Profile = ({ isLogo = false, theme }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const Profile = ({ isLogo = false }) => {
       {isLogo && screenWidth > 400 && (
         <Link to={"/Portfolio.AqibAli/"} className="logoImage">
           <img
-            src={LogoImage}
+            src={theme === "light" ? LightModeLogoImage : DarkModeLogoImage}
             alt="Logo"
             className="logo"
             style={{

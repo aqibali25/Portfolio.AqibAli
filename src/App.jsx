@@ -1,24 +1,33 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
-  const openSidebar = () => {
-    setSidebarOpen(true);
+  const openSidebar = () => setSidebarOpen(true);
+  const closeSidebar = () => setSidebarOpen(false);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
-  const closeSidebar = () => {
-    setSidebarOpen(false);
-  };
+  useEffect(() => {
+    document.body.className = theme; // Apply theme to body
+  }, [theme]);
 
   return (
     <BrowserRouter>
-      <Navbar openSidebar={openSidebar}></Navbar>
-      {/* Overlay */}
+      <Navbar
+        openSidebar={openSidebar}
+        toggleTheme={toggleTheme}
+        theme={theme}
+      />
       {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
       <Sidebar closeSidebar={closeSidebar} sidebarOpen={sidebarOpen} />
     </BrowserRouter>
