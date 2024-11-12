@@ -8,7 +8,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #111111;
+  color: var(--text-color);
 }
 
 /* Root element */
@@ -99,4 +99,8 @@ button {
 /* Smooth Transition for all Elements */
 body * {
   transition: all 0.5s ease;
+}
+section {
+  width: 100%;
+  min-height: calc(100vh - 100px);
 }

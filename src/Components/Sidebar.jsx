@@ -63,8 +63,13 @@ const Sidebar = ({ closeSidebar, sidebarOpen }) => {
             </ul>
           </div>
           <div className="seprationLine"></div>
-          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-            <SocialIcons />
+          <div
+            className="col-12"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
+            <SocialIcons isPadding={true} />
           </div>
         </>
       )}

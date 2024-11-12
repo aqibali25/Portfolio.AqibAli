@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import Home from "./Pages/Home/Home";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
       />
       {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
       <Sidebar closeSidebar={closeSidebar} sidebarOpen={sidebarOpen} />
+      <Home></Home>
     </BrowserRouter>
   );
 };
