@@ -1,21 +1,11 @@
-import React from "react";
-import styled from "styled-components";
 import { RotateLoader } from "react-spinners";
 
 const Loader = () => {
   return (
-    <StyledWrapper>
+    <div className="loader-wrapper">
       <RotateLoader color="#f5024d" size={15} />
-    </StyledWrapper>
+    </div>
   );
 };
-
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  //   background-color: #212121;
-`;
 
 export default Loader;

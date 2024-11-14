@@ -30,7 +30,7 @@ const App = () => {
     const fallbackTimer = setTimeout(() => {
       console.log("Fallback timer triggered, hiding loader");
       setLoading(false);
-    }, 0); // Hides loader after 5 seconds as a fallback
+    }, 800); // Hides loader after 5 seconds as a fallback
 
     // Select all images on the page after a slight delay to ensure they are rendered
     setTimeout(() => {
