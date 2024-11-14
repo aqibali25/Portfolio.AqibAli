@@ -80,7 +80,7 @@ const Home = () => {
         data-aos="zoom-in" // Profile image zooms in
         data-aos-delay="1200"
       >
-        <img src={HomeImage} alt="Home Pic" />
+        <img src={HomeImage} alt="Profile Pic" />
       </div>
     </section>
   );
