@@ -26,15 +26,46 @@ const App = () => {
     document.body.className = theme;
     AOS.init({ duration: 1000, once: true });
 
-    // Use the window's load event to detect when all images and content are fully loaded
-    const handleContentLoaded = () => setLoading(false);
-    window.addEventListener("load", handleContentLoaded);
+    // Use a timeout fallback to avoid infinite loading
+    const fallbackTimer = setTimeout(() => {
+      console.log("Fallback timer triggered, hiding loader");
+      setLoading(false);
+    }, 0); // Hides loader after 5 seconds as a fallback
 
-    // Cleanup event listener when component unmounts
-    return () => window.removeEventListener("load", handleContentLoaded);
+    // Select all images on the page after a slight delay to ensure they are rendered
+    setTimeout(() => {
+      const images = document.querySelectorAll("img");
+      let imagesLoaded = 0;
+
+      console.log(`Found ${images.length} images`);
+
+      const handleImageLoad = () => {
+        imagesLoaded++;
+        console.log(`Image loaded: ${imagesLoaded}/${images.length}`);
+        if (imagesLoaded === images.length) {
+          clearTimeout(fallbackTimer); // Clear the fallback timer
+          setLoading(false);
+        }
+      };
+
+      images.forEach((img) => {
+        if (img.complete) {
+          handleImageLoad(); // Image already loaded
+        } else {
+          img.addEventListener("load", handleImageLoad);
+          img.addEventListener("error", handleImageLoad); // Handles cases where image fails to load
+        }
+      });
+
+      return () => {
+        images.forEach((img) => {
+          img.removeEventListener("load", handleImageLoad);
+          img.removeEventListener("error", handleImageLoad);
+        });
+      };
+    }, 100); // Delay to ensure images are in DOM
   }, [theme]);
 
-  // Render the Loader component while the page is still loading
   if (loading) {
     return <Loader />;
   }
