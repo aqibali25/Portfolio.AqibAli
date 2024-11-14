@@ -4,14 +4,14 @@ import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import { BrowserRouter } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css";
 import Home from "./Pages/Home/Home";
-import Loader from "./Components/Loader"; // Import your custom loader
+import Loader from "./Components/Loader";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
   const openSidebar = () => setSidebarOpen(true);
   const closeSidebar = () => setSidebarOpen(false);
@@ -24,20 +24,17 @@ const App = () => {
 
   useEffect(() => {
     document.body.className = theme;
-    AOS.init({
-      duration: 1000, // Duration of animation
-      once: true, // Animation triggers only once
-    });
+    AOS.init({ duration: 1000, once: true });
 
-    // Event listener for window load
+    // Use the window's load event to detect when all images and content are fully loaded
     const handleContentLoaded = () => setLoading(false);
     window.addEventListener("load", handleContentLoaded);
 
-    // Clean up the event listener
+    // Cleanup event listener when component unmounts
     return () => window.removeEventListener("load", handleContentLoaded);
   }, [theme]);
 
-  // Conditional rendering: Show loader while loading is true
+  // Render the Loader component while the page is still loading
   if (loading) {
     return <Loader />;
   }
