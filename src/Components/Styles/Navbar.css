@@ -1,6 +1,6 @@
 /* Default to dark mode */
 body.dark {
-  --navbar-bg: #212428;
+  --navbar-bg: #212428bd;
   --navbar-box-shadow: 0 4px 10px #00000033;
   --icon-bg: #4a4a4a63;
   --icon-hover-bg: #4a4a4a63;
@@ -8,7 +8,7 @@ body.dark {
 
 /* Light mode styles */
 body.light {
-  --navbar-bg: #ffffff;
+  --navbar-bg: #ffffffad;
   --navbar-box-shadow: 0 4px 10px #0000001a;
   --icon-bg: #f0f0f0;
   --icon-hover-bg: #dcdcdc;

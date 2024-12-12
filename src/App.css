@@ -44,9 +44,8 @@ body.dark {
   --button-bg-color: #212428;
   --box-shadow-color: rgba(0, 0, 0, 0.5);
 }
-
-/* Body Background and Text Color */
 #root {
+  min-height: 105vh;
   background-color: var(--bg-color);
   color: var(--text-color);
 }

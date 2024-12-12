@@ -18,12 +18,6 @@ body.dark {
   --secondary-bg: #1f2226;
 }
 
-.home {
-  padding: 30px;
-  background-color: var(--bg-color);
-  width: 100% !important;
-}
-
 .introText {
   width: 45%;
   height: auto;
