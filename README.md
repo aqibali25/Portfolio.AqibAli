@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built with **React.js**, **Tailw
 
 ## 🌐 Live Preview
 
-👉 **Portfolio Website:** [https://aqibali25.github.io/Portfolio.AqibAli/](Portfolio.AqibAli)
+👉 **Portfolio Website:** [Portfolio.AqibAli](https://aqibali25.github.io/Portfolio.AqibAli/)
 
 ## 📌 About This Project
 
