@@ -9,7 +9,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-import Profile from "../assets/InShot_20251224_210418502.jpg";
+import Profile from "../assets/Image1.jpeg";
 
 const About = () => {
   const stats = [
@@ -118,8 +118,8 @@ const About = () => {
                   src={Profile}
                   alt="Aqib Ali Kalwar"
                   className="w-full h-full object-cover aspect-square"
-                  style={{ scale: 1.2 }}
-                  whileHover={{ scale: 1.3 }}
+                  style={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 />
               </motion.div>
@@ -242,9 +242,9 @@ const About = () => {
               </motion.p>
             </div>
 
-            {/* Contact Info */}
+            {/* Contact Info - CHANGED HERE */}
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4"
               variants={statsVariants}
             >
               {contactInfo.map((info, index) => (
@@ -283,8 +283,9 @@ const About = () => {
                 Hire Me
               </motion.a>
               <motion.a
-                href="/Aqib_Ali_Resume.pdf"
-                download
+                href="https://aqibali25.github.io/Portfolio.AqibAli/Aqib_Ali_Resume.pdf"
+                download="Aqib_Ali_Resume.pdf"
+                target="_blank"
                 className="btn-secondary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

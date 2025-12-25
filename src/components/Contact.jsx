@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Send,
   MapPin,
@@ -9,7 +9,9 @@ import {
   Linkedin,
   Github,
   FileText,
+  Loader2,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,13 +21,19 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // EmailJS Configuration - REPLACE THESE WITH YOUR ACTUAL IDs
+  const EMAILJS_SERVICE_ID = "service_zy1r50t"; // Replace with your Service ID
+  const EMAILJS_TEMPLATE_ID = "template_cginsay"; // Replace with your Template ID
+  const EMAILJS_PUBLIC_KEY = "3CGdnYWBY3EvS3XpL"; // Replace with your Public Key
 
   const contactInfo = [
     {
       icon: MapPin,
       title: "Location",
       detail: "Ghotki, Sindh, Pakistan",
-      link: "https://maps.google.com",
+      link: "https://maps.google.com/maps?q=Ghotki+Sindh+Pakistan",
     },
     {
       icon: Phone,
@@ -43,7 +51,7 @@ const Contact = () => {
       icon: FileText,
       title: "Resume",
       detail: "Download PDF",
-      link: "/Aqib_Ali_Resume.pdf",
+      link: "https://aqibali25.github.io/Portfolio.AqibAli/Aqib_Ali_Resume.pdf",
       download: "Aqib_Ali_Resume.pdf",
     },
   ];
@@ -63,12 +71,52 @@ const Contact = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    setIsLoading(true);
+
+    // EmailJS template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject || "Contact from Portfolio",
+      message: formData.message,
+      to_email: "aqibalikalwar1@gmail.com",
+      reply_to: formData.email,
+      date: new Date().toLocaleDateString(),
+      time: new Date().toLocaleTimeString(),
+    };
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert(
+        "Failed to send message. Please try again or email me directly at aqibalikalwar1@gmail.com"
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -139,7 +187,7 @@ const Contact = () => {
               <motion.a
                 key={info.title}
                 href={info.link}
-                target={info.title === "Resume" ? "_blank" : "_self"}
+                target="_blank"
                 rel="noopener noreferrer"
                 download={info.download}
                 className="flex items-start gap-4 sm:p-6 px-2 py-2 bg-white dark:bg-dark rounded-xl shadow-lg hover:shadow-xl transition-shadow card-hover"
@@ -214,7 +262,7 @@ const Contact = () => {
               >
                 <motion.div variants={formItemVariants}>
                   <label htmlFor="name" className="block mb-2 font-medium">
-                    Your Name
+                    Your Name *
                   </label>
                   <input
                     type="text"
@@ -225,12 +273,13 @@ const Contact = () => {
                     className="input-field"
                     placeholder="John Doe"
                     required
+                    disabled={isLoading || isSubmitted}
                   />
                 </motion.div>
 
                 <motion.div variants={formItemVariants}>
                   <label htmlFor="email" className="block mb-2 font-medium">
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -241,6 +290,7 @@ const Contact = () => {
                     className="input-field"
                     placeholder="john@example.com"
                     required
+                    disabled={isLoading || isSubmitted}
                   />
                 </motion.div>
               </motion.div>
@@ -257,13 +307,13 @@ const Contact = () => {
                   onChange={handleChange}
                   className="input-field"
                   placeholder="Project Inquiry / Job Opportunity"
-                  required
+                  disabled={isLoading || isSubmitted}
                 />
               </motion.div>
 
               <motion.div variants={formItemVariants}>
                 <label htmlFor="message" className="block mb-2 font-medium">
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
@@ -274,17 +324,32 @@ const Contact = () => {
                   className="input-field"
                   placeholder="Tell me about your project or opportunity..."
                   required
+                  disabled={isLoading || isSubmitted}
                 ></textarea>
               </motion.div>
 
               <motion.button
                 type="submit"
                 className="btn-primary flex items-center gap-2 w-full md:w-auto justify-center"
-                disabled={isSubmitted}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                disabled={isLoading || isSubmitted}
+                whileHover={isLoading || isSubmitted ? {} : { scale: 1.05 }}
+                whileTap={isLoading || isSubmitted ? {} : { scale: 0.95 }}
               >
-                {isSubmitted ? (
+                {isLoading ? (
+                  <>
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    >
+                      <Loader2 className="w-5 h-5" />
+                    </motion.div>
+                    Sending...
+                  </>
+                ) : isSubmitted ? (
                   <>
                     <CheckCircle className="w-5 h-5" />
                     Message Sent!
@@ -306,8 +371,14 @@ const Contact = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Thank you! Your message has been sent. I'll get back to you
-                    within 24 hours.
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="font-medium">Success!</span>
+                    </div>
+                    <p className="mt-1">
+                      Thank you for your message! I'll get back to you within 24
+                      hours.
+                    </p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -325,6 +396,9 @@ const Contact = () => {
                 full-time positions, and collaboration opportunities. Let's
                 discuss how I can help bring your ideas to life!
               </p>
+              <p className="text-xs mt-2 text-gray-500 dark:text-gray-400">
+                * Required fields
+              </p>
             </motion.div>
           </motion.div>
         </div>
@@ -332,8 +406,5 @@ const Contact = () => {
     </section>
   );
 };
-
-// Add AnimatePresence import at the top
-import { AnimatePresence } from "framer-motion";
 
 export default Contact;

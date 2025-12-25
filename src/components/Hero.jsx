@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, FileDown } from "lucide-react";
-import Profile from "../assets/Home.png";
+import Profile from "../assets/Image2.png";
 import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/agibali25", label: "GitHub" },
+    { icon: Github, href: "https://github.com/aqibali25", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/aqibali-frontend-react-developer-mern/",
@@ -17,10 +17,10 @@ const Hero = () => {
   const typewriterStrings = [
     "Frontend Developer",
     "React Developer",
-    "MERN Stack Developer",
+    "Jr. MERN Stack Dev",
     "Web Developer",
-    "JavaScript Developer",
-    "Full Stack Developer",
+    "JavaScript Dev",
+    "Jr. Full Stack Dev",
   ];
 
   // Slower, more elegant animations
@@ -80,9 +80,9 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
               variants={itemVariants}
             >
-              Hi, I'm <span className="text-primary">Aqib Ali Kalwar</span>
+              Hi, I'm <span className="text-primary">Aqib Ali</span>
               <br />
-              <span className="text-secondary h-24 md:h-28 lg:h-32 block">
+              <span className="text-secondary block">
                 <TypewriterEffect
                   strings={typewriterStrings}
                   typingSpeed={100}
@@ -126,8 +126,9 @@ const Hero = () => {
                 View Projects
               </motion.a>
               <motion.a
-                href="/Aqib_Ali_Resume.pdf"
+                href="https://aqibali25.github.io/Portfolio.AqibAli/Aqib_Ali_Resume.pdf"
                 download="Aqib_Ali_Resume.pdf"
+                target="_blank"
                 className="btn-secondary flex items-center gap-2"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
@@ -149,7 +150,7 @@ const Hero = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-gray-100 dark:bg-dark-light hover:bg-primary hover:text-white transition-all duration-300"
+                  className="p-3 rounded-full bg-gray-100 dark:bg-dark-light hover:!bg-primary hover:text-white transition-all duration-300 "
                   aria-label={link.label}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
