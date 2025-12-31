@@ -23,10 +23,10 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  // EmailJS Configuration - REPLACE THESE WITH YOUR ACTUAL IDs
-  const EMAILJS_SERVICE_ID = "service_zy1r50t"; // Replace with your Service ID
-  const EMAILJS_TEMPLATE_ID = "template_cginsay"; // Replace with your Template ID
-  const EMAILJS_PUBLIC_KEY = "3CGdnYWBY3EvS3XpL"; // Replace with your Public Key
+  // EmailJS Configuration
+  const EMAILJS_SERVICE_ID = "service_zy1r50t";
+  const EMAILJS_TEMPLATE_ID = "template_cginsay";
+  const EMAILJS_PUBLIC_KEY = "3CGdnYWBY3EvS3XpL";
 
   const contactInfo = [
     {
