@@ -5,6 +5,7 @@ import {
   Award,
   Calendar,
   Code,
+  Workflow,
   Laptop,
   Rocket,
   Users,
@@ -12,6 +13,27 @@ import {
 
 const Experience = () => {
   const experiences = [
+    {
+      icon: Workflow,
+      title: "React Developer Intern",
+      company: "Infirix",
+      period: "Aug 2025 - Jan 2026",
+      description:
+        "Contributed as a React Developer Intern to production-grade web applications by converting Figma UI/UX designs into pixel-perfect, responsive React components using React.js, JavaScript (ES6+), HTML5, and CSS3. Developed and maintained frontend features for an Inventory Management System, focusing on state management, API integration, and component reusability to support scalable application architecture. Collaborated with cross-functional teams in an Agile environment while following component-based architecture, Git/GitHub workflows, performance optimization practices, and industry-standard frontend development processes.",
+      type: "work",
+      skills: [
+        "React.js",
+        "JavaScript (ES6+)",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+        "Responsive Web Design",
+        "REST APIs",
+        "JSON",
+        "Git",
+        "Zustand",
+      ],
+    },
     {
       icon: Code,
       title: "Frontend React Developer",
@@ -29,15 +51,7 @@ const Experience = () => {
         "REST APIs",
       ],
     },
-    {
-      icon: Laptop,
-      title: "Web Development Training",
-      company: "Sukkur IBA University",
-      period: "2023",
-      description:
-        "Completed comprehensive web development training covering HTML5, CSS3, JavaScript, React, Node.js, and database management. Built multiple projects during the training program.",
-      type: "education",
-    },
+
     {
       icon: GraduationCap,
       title: "Bachelor of Science in Computer Science",
@@ -45,6 +59,15 @@ const Experience = () => {
       period: "2022 – 2025",
       description:
         "Currently pursuing BSCS with GPA: 3.2/4.0. Final Year Project: Campus Management System covering multiple modules with role-based access.",
+      type: "education",
+    },
+    {
+      icon: Laptop,
+      title: "Web Development Training",
+      company: "Sukkur IBA University",
+      period: "2023",
+      description:
+        "Completed comprehensive web development training covering HTML5, CSS3, JavaScript, React, Node.js, and database management. Built multiple projects during the training program.",
       type: "education",
     },
     {

@@ -26,6 +26,7 @@ const Projects = () => {
       tags: [
         "React",
         "Node.js",
+        "Express",
         "MySQL",
         "JWT Auth",
         "Tailwind",
@@ -35,37 +36,46 @@ const Projects = () => {
       icon: Building2,
       github: "https://github.com/aqibali25/SALU-PORTAL-FYP",
       live: "https://github.com/aqibali25/SALU-PORTAL-FYP",
-      featured: true,
+      // featured: true,
       duration: "Final Year Project",
     },
     {
       title: "AI Janat Educational Foundation",
       description:
         "Responsive educational website with interactive UI components and smooth API integration.",
-      tags: ["React", "JavaScript", "Bootstrap", "API Integration"],
+      tags: [
+        "React",
+        "JavaScript",
+        "Bootstrap",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "API Integration",
+      ],
       icon: Book,
       github: "https://github.com/aqibali25/Al-jannat-educational-foundation",
       live: "https://github.com/aqibali25/Al-jannat-educational-foundation",
-      featured: true,
+      // featured: true,
     },
-    // {
-    //   title: "E-commerce Platform",
-    //   description:
-    //     "Full-featured online store with shopping cart, user authentication, and payment integration.",
-    //   tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-    //   icon: ShoppingCart,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Car Rental System",
-    //   description:
-    //     "Car booking platform with availability checking, booking system, and admin dashboard.",
-    //   tags: ["React", "Express", "MySQL", "JWT Auth"],
-    //   icon: Car,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
+    {
+      title: "E-commerce Platform",
+      description:
+        "Full-featured online store with shopping cart, user authentication, and payment integration.",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Redux"],
+      icon: ShoppingCart,
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "Snake Game",
+      description:
+        "Classic Snake game with responsive design and localStorage for high score tracking.",
+      tags: ["React", "JavaScript", "Tailwind", "React Hooks", "LocalStorage"],
+      icon: Gamepad2,
+      github: "https://github.com/aqibali25/Snake-Game",
+      live: "https://aqibali25.github.io/snake-game/",
+    },
+
     // {
     //   title: "Task Management App",
     //   description:
@@ -99,7 +109,7 @@ const Projects = () => {
     //     "Interactive quiz platform with multiple question types and score tracking.",
     //   tags: ["React", "Express", "MongoDB", "JWT"],
     //   icon: Database,
-    //   github: "https://github.com/agibali25",
+    //   github: "https://github.com/aqibali25",
     //   live: "#",
     // },
     // {
@@ -244,7 +254,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className={`bg-white dark:bg-dark rounded-xl overflow-hidden shadow-lg card-hover ${
+              className={`bg-white dark:bg-dark rounded-xl overflow-hidden shadow-lg card-hover flex justify-between flex-col ${
                 project.featured ? "lg:col-span-2" : ""
               }`}
               variants={cardVariants}
@@ -386,10 +396,10 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           {[
-            { label: "Total Projects", value: "10+" },
+            { label: "Total Projects", value: "11+" },
             { label: "Frontend Projects", value: "8+" },
-            { label: "Full Stack Projects", value: "6+" },
-            { label: "Technologies Used", value: "15+" },
+            { label: "Full Stack Projects", value: "3+" },
+            { label: "Technologies Used", value: "8+" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
