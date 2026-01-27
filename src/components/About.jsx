@@ -283,7 +283,7 @@ const About = () => {
                 Hire Me
               </motion.a>
               <motion.a
-                href="https://aqibali25.github.io/Portfolio.AqibAli/Aqib_Ali_Resume.pdf"
+                href="https://aqibali25.github.io/Portfolio.AqibAli/AqibAli_Resume.pdf"
                 download="Aqib_Ali_Resume.pdf"
                 target="_blank"
                 className="btn-secondary"

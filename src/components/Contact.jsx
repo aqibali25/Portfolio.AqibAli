@@ -51,8 +51,8 @@ const Contact = () => {
       icon: FileText,
       title: "Resume",
       detail: "Download PDF",
-      link: "https://aqibali25.github.io/Portfolio.AqibAli/Aqib_Ali_Resume.pdf",
-      download: "Aqib_Ali_Resume.pdf",
+      link: "https://aqibali25.github.io/Portfolio.AqibAli/AqibAli_Resume.pdf",
+      download: "AqibAli_Resume.pdf",
     },
   ];
 
@@ -99,7 +99,7 @@ const Contact = () => {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       setIsSubmitted(true);
@@ -112,7 +112,7 @@ const Contact = () => {
     } catch (error) {
       console.error("Error sending email:", error);
       alert(
-        "Failed to send message. Please try again or email me directly at aqibalikalwar1@gmail.com"
+        "Failed to send message. Please try again or email me directly at aqibalikalwar1@gmail.com",
       );
     } finally {
       setIsLoading(false);

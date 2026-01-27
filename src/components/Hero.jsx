@@ -126,8 +126,8 @@ const Hero = () => {
                 View Projects
               </motion.a>
               <motion.a
-                href="https://aqibali25.github.io/Portfolio.AqibAli/Aqib_Ali_Resume.pdf"
-                download="Aqib_Ali_Resume.pdf"
+                href="https://aqibali25.github.io/Portfolio.AqibAli/AqibAli_Resume.pdf"
+                download="AqibAli_Resume.pdf"
                 target="_blank"
                 className="btn-secondary flex items-center gap-2"
                 whileHover={{ scale: 1.05, y: -2 }}
