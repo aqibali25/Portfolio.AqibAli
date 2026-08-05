@@ -8,7 +8,7 @@ const Hero = () => {
     { icon: Github, href: "https://github.com/aqibali25", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/aqibali-frontend-react-developer-mern/",
+      href: "https://www.linkedin.com/in/aqibali25/",
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:aqibalikalwar1@gmail.com", label: "Email" },
@@ -17,10 +17,10 @@ const Hero = () => {
   const typewriterStrings = [
     "Frontend Developer",
     "React Developer",
-    "Jr. MERN Stack Dev",
+    "Next.js Developer",
+    "Junior Full Stack Developer",
+    "MERN Stack Developer",
     "Web Developer",
-    "JavaScript Dev",
-    "Jr. Full Stack Dev",
   ];
 
   // Slower, more elegant animations
@@ -96,10 +96,11 @@ const Hero = () => {
               className="mt-6 text-lg text-gray-600 dark:text-gray-300"
               variants={itemVariants}
             >
-              Frontend-focused Full Stack Developer with{" "}
-              <strong>1+ year of experience</strong> building responsive,
-              scalable web applications using React, JavaScript, Tailwind CSS,
-              and modern web technologies.
+              Full Stack Developer with strong frontend expertise and{" "}
+              <strong>1.5+ years of hands-on development experience</strong>
+              building responsive web applications, role-based dashboards,
+              REST API integrations, and scalable UI components using React.js,
+              Next.js, JavaScript, Tailwind CSS, and Bootstrap.
             </motion.p>
 
             <motion.div
@@ -126,8 +127,8 @@ const Hero = () => {
                 View Projects
               </motion.a>
               <motion.a
-                href="https://aqibali25.github.io/Portfolio.AqibAli/AqibAli_Resume.pdf"
-                download="AqibAli_Resume.pdf"
+                href="/Portfolio.AqibAli/Aqib_Ali_Resume.pdf"
+                download="Aqib_Ali_Resume.pdf"
                 target="_blank"
                 className="btn-secondary flex items-center gap-2"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -194,7 +195,7 @@ const Hero = () => {
               >
                 <motion.img
                   src={Profile}
-                  alt="Aqib Ali Kalwar - Frontend React Developer"
+                  alt="Aqib Ali - Frontend Developer"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }} // Slower zoom

@@ -56,9 +56,9 @@ const Footer = () => {
             className="text-gray-400 mb-8 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            Frontend React Developer specialized in building responsive,
-            scalable web applications. Passionate about creating digital
-            experiences that make a difference.
+            Full Stack Developer with strong frontend expertise, building
+            responsive web applications, role-based dashboards, REST API
+            integrations, and scalable UI components with React.js and Next.js.
           </motion.p>
 
           {/* Contact Info */}
@@ -108,7 +108,7 @@ const Footer = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                © {currentYear} Aqib Ali Kalwar. All rights reserved.
+                © {currentYear} Aqib Ali. All rights reserved.
               </motion.p>
 
               <motion.div

@@ -12,6 +12,7 @@ import {
   MessageSquare,
   Coffee,
   Gamepad2,
+  Code,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -20,116 +21,65 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Campus Management System",
+      title: "Aftermad - Novel & Webtoon Platform",
       description:
-        "Comprehensive system with Admission, Attendance, Library, Examination, HR, Finance modules. Multiple role-based portals (Student, Teacher, Admin, HOD).",
+        "Client project for a paid novel and webtoon platform with coin-based chapter unlocks, payment integration, and role-based dashboards for writers, admins, and super admins.",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "PayPal",
+        "Braintree",
+        "Aiven",
+        "Cloudflare",
+      ],
+      icon: Book,
+      github: "#",
+      live: "#",
+      duration: "Client Project",
+    },
+    {
+      title: "eCampus Portal",
+      description:
+        "University management portal with Admission, Attendance, Library, Examination, Hostel, HR, Finance, Purchase and Store, and Scheduling modules. Led frontend development with role-based dashboards, dynamic forms, Zustand state management, and REST API integration.",
       tags: [
         "React",
-        "Node.js",
-        "Express",
-        "MySQL",
-        "JWT Auth",
+        "JavaScript",
         "Tailwind",
         "Zustand",
-        "Azure",
+        "REST APIs",
+        "Role-Based UI",
       ],
       icon: Building2,
       github: "https://github.com/aqibali25/SALU-PORTAL-FYP",
       live: "https://github.com/aqibali25/SALU-PORTAL-FYP",
-      // featured: true,
       duration: "Final Year Project",
     },
     {
-      title: "AI Janat Educational Foundation",
+      title: "Al Jannat Educational Foundation",
       description:
-        "Responsive educational website with interactive UI components and smooth API integration.",
+        "Responsive educational foundation website built with React.js, JavaScript, and Bootstrap. Developed reusable UI components, responsive navigation, interactive sections, smooth layouts, and dynamic content integration.",
       tags: [
         "React",
         "JavaScript",
         "Bootstrap",
-        "Node.js",
-        "Express",
-        "MySQL",
-        "API Integration",
+        "HTML5",
+        "CSS3",
+        "Responsive Design",
       ],
       icon: Book,
       github: "https://github.com/aqibali25/Al-jannat-educational-foundation",
       live: "https://github.com/aqibali25/Al-jannat-educational-foundation",
-      // featured: true,
     },
     {
-      title: "E-commerce Platform",
+      title: "Personal Portfolio Website",
       description:
-        "Full-featured online store with shopping cart, user authentication, and payment integration.",
-      tags: ["React", "Node.js", "Express", "MongoDB", "Redux"],
-      icon: ShoppingCart,
-      github: "#",
-      live: "#",
+        "Responsive personal portfolio built with React.js, Tailwind CSS, Framer Motion, and GitHub Pages to present my skills, work experience, projects, resume, and contact details.",
+      tags: ["React", "Tailwind", "Framer Motion", "Responsive UI", "GitHub Pages"],
+      icon: Code,
+      github: "https://github.com/aqibali25/Portfolio.AqibAli",
+      live: "https://aqibali25.github.io/Portfolio.AqibAli/",
     },
-    {
-      title: "Snake Game",
-      description:
-        "Classic Snake game with responsive design and localStorage for high score tracking.",
-      tags: ["React", "JavaScript", "Tailwind", "React Hooks", "LocalStorage"],
-      icon: Gamepad2,
-      github: "https://github.com/aqibali25/Snake-Game",
-      live: "https://aqibali25.github.io/snake-game/",
-    },
-
-    // {
-    //   title: "Task Management App",
-    //   description:
-    //     "Collaborative project management tool with drag-drop interface and team features.",
-    //   tags: ["React", "TypeScript", "Tailwind", "Socket.io"],
-    //   icon: Calendar,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Real-time Chat Application",
-    //   description:
-    //     "Messaging app with real-time communication, file sharing, and video call capabilities.",
-    //   tags: ["React", "Socket.io", "WebRTC", "Firebase"],
-    //   icon: MessageSquare,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Coffee Shop Management",
-    //   description:
-    //     "Inventory and order management system for coffee shop with sales analytics.",
-    //   tags: ["React", "Node.js", "MongoDB", "Chart.js"],
-    //   icon: Coffee,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Online Quiz Platform",
-    //   description:
-    //     "Interactive quiz platform with multiple question types and score tracking.",
-    //   tags: ["React", "Express", "MongoDB", "JWT"],
-    //   icon: Database,
-    //   github: "https://github.com/aqibali25",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Social Media Dashboard",
-    //   description:
-    //     "Analytics dashboard for social media platforms with data visualization.",
-    //   tags: ["React", "Chart.js", "API Integration", "Tailwind"],
-    //   icon: Users,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Memory Card Game",
-    //   description:
-    //     "Interactive memory matching game with score tracking and multiple difficulty levels.",
-    //   tags: ["React", "JavaScript", "CSS3", "Game Logic"],
-    //   icon: Gamepad2,
-    //   github: "https://github.com/agibali25",
-    //   live: "#",
-    // },
   ];
 
   // New animations only
@@ -231,16 +181,8 @@ const Projects = () => {
         >
           <h2 className="section-title">Projects Portfolio</h2>
           <p className="section-subtitle mx-auto">
-            A collection of my recent work including{" "}
-            <motion.strong
-              className="text-primary"
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-            >
-              10+ projects
-            </motion.strong>{" "}
-            across various domains
+            Selected projects from my resume, including frontend, full-stack,
+            dashboard, and client project experience
           </p>
         </motion.div>
 

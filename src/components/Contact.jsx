@@ -32,8 +32,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      detail: "Ghotki, Sindh, Pakistan",
-      link: "https://maps.google.com/maps?q=Ghotki+Sindh+Pakistan",
+      detail: "Karachi, Pakistan",
+      link: "https://maps.google.com/maps?q=Karachi+Pakistan",
     },
     {
       icon: Phone,
@@ -51,8 +51,8 @@ const Contact = () => {
       icon: FileText,
       title: "Resume",
       detail: "Download PDF",
-      link: "https://aqibali25.github.io/Portfolio.AqibAli/AqibAli_Resume.pdf",
-      download: "AqibAli_Resume.pdf",
+      link: "/Portfolio.AqibAli/Aqib_Ali_Resume.pdf",
+      download: "Aqib_Ali_Resume.pdf",
     },
   ];
 
@@ -60,8 +60,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       title: "LinkedIn",
-      detail: "linkedin.com/in/aqibali",
-      link: "https://www.linkedin.com/in/aqibali-frontend-react-developer-mern/",
+      detail: "linkedin.com/in/aqibali25",
+      link: "https://www.linkedin.com/in/aqibali25",
     },
     {
       icon: Github,

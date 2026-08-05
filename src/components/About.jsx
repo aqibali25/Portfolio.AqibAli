@@ -13,13 +13,13 @@ import Profile from "../assets/Image1.jpeg";
 
 const About = () => {
   const stats = [
-    { icon: Target, label: "Projects Completed", value: "10+" },
-    { icon: Award, label: "Years Experience", value: "1+" },
-    { icon: Users, label: "Technologies", value: "10+" },
+    { icon: Target, label: "Projects Completed", value: "3+" },
+    { icon: Award, label: "Hands-on Experience", value: "1.5+" },
+    { icon: Users, label: "Technologies", value: "15+" },
   ];
 
   const contactInfo = [
-    { icon: MapPin, label: "Location", value: "Ghotki, Sindh, Pakistan" },
+    { icon: MapPin, label: "Location", value: "Karachi, Pakistan" },
     { icon: Phone, label: "Phone", value: "+92-310-3001810" },
     { icon: Mail, label: "Email", value: "aqibalikalwar1@gmail.com" },
     { icon: Calendar, label: "Availability", value: "Available for Work" },
@@ -170,7 +170,7 @@ const About = () => {
                     <User className="w-6 h-6 text-primary" />
                   </motion.div>
                   <div>
-                    <div className="text-2xl font-bold">1+</div>
+                    <div className="text-2xl font-bold">1.5+</div>
                     <div className="text-sm text-gray-600 dark:text-gray-300">
                       Years Exp.
                     </div>
@@ -204,9 +204,9 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Frontend React Developer
+                Frontend / Full Stack Developer
                 <span className="block text-primary">
-                  Exploring in MERN Stack
+                  React.js & Next.js Focused
                 </span>
               </motion.h2>
 
@@ -216,11 +216,12 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                I'm a passionate Frontend-focused Full Stack Developer with{" "}
-                <strong>1+ year of experience</strong> building responsive,
-                scalable web applications using{" "}
+                I'm a Full Stack Developer with strong frontend expertise and{" "}
+                <strong>1.5+ years of hands-on development experience</strong>,
+                including professional experience in React.js and Next.js
+                development. I build responsive web applications using{" "}
                 <strong>
-                  React, JavaScript (ES6+), Tailwind CSS, and Bootstrap
+                  React.js, Next.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, and Bootstrap
                 </strong>
                 .
               </motion.p>
@@ -231,14 +232,14 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Strong hands-on experience with{" "}
+                I have worked on ERP dashboards, reusable UI components, dynamic
+                forms, role-based dashboards, RESTful API integrations, and
+                database-driven features. I also have project-level experience
+                with{" "}
                 <strong>
-                  Node.js, Express.js, RESTful APIs, JWT authentication
+                  Node.js, Express.js, Next.js API Routes, PostgreSQL, MongoDB, MySQL, Redux, Zustand, Context API, PayPal/Braintree, Aiven, and Cloudflare
                 </strong>
-                , and server-side logic. Proficient in{" "}
-                <strong>MongoDB and MySQL</strong> for data modeling and CRUD
-                operations. Experienced in API integration, state management
-                using Zustand and Redux.
+                through internship, academic, and client projects.
               </motion.p>
             </div>
 
@@ -283,7 +284,7 @@ const About = () => {
                 Hire Me
               </motion.a>
               <motion.a
-                href="https://aqibali25.github.io/Portfolio.AqibAli/AqibAli_Resume.pdf"
+                href="/Portfolio.AqibAli/Aqib_Ali_Resume.pdf"
                 download="Aqib_Ali_Resume.pdf"
                 target="_blank"
                 className="btn-secondary"
@@ -318,12 +319,12 @@ const About = () => {
               {
                 title: "Frontend Development",
                 description:
-                  "Building responsive UIs with React, JavaScript, Tailwind CSS, and modern frameworks.",
+                  "Building responsive UIs with React.js, Next.js, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, and Bootstrap.",
                 color: "bg-blue-500",
                 skills: [
                   "React.js",
+                  "Next.js",
                   "JavaScript ES6+",
-                  "HTML5/CSS3",
                   "Tailwind CSS",
                   "Bootstrap",
                 ],
@@ -331,40 +332,40 @@ const About = () => {
               {
                 title: "Backend & APIs",
                 description:
-                  "Developing RESTful APIs, server-side logic, and authentication with Node.js & Express.",
+                  "Project exposure to Node.js, Express.js, Next.js API Routes, RESTful APIs, and CRUD operations.",
                 color: "bg-green-500",
                 skills: [
                   "Node.js",
                   "Express.js",
+                  "Next.js API Routes",
                   "REST APIs",
-                  "JWT Auth",
-                  "Middleware",
+                  "CRUD",
                 ],
               },
               {
                 title: "Databases",
                 description:
-                  "Data modeling, CRUD operations, and database management with MongoDB & MySQL.",
+                  "Project exposure to PostgreSQL, MongoDB, MySQL, database integration, and hosted database workflows.",
                 color: "bg-purple-500",
                 skills: [
+                  "PostgreSQL",
                   "MongoDB",
                   "MySQL",
-                  "Mongoose",
-                  "Database Design",
-                  "CRUD Operations",
+                  "Aiven",
+                  "Basic CRUD",
                 ],
               },
               {
                 title: "Tools & State Management",
                 description:
-                  "Version control, API testing, and efficient state management solutions.",
+                  "Version control, Postman API testing, debugging, manual testing, and project-based state management experience.",
                 color: "bg-orange-500",
                 skills: [
                   "Git/GitHub",
                   "Postman",
+                  "VS Code",
                   "Redux",
                   "Zustand",
-                  "VS Code",
                 ],
               },
             ].map((service, index) => (
